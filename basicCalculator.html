@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic Calculator</title>
+</head>
+<body>
+num1 : <input type="text" id="num1"/><br><br>
+num2 : <input type="text" id="num2"/>
+<br>
+<br>
+<button id="add">+</button>
+<button id="sub">-</button>
+<button id="mul">*</button>
+<button id="dev">/</button>
+<br><br>
+Ans = <label id="ans">
+
+</label>
+<script>
+    var res;
+document.querySelector("#add").addEventListener("click",function(){
+    res= parseInt(document.querySelector("#num1").value) + parseInt(document.querySelector("#num2").value);
+    document.querySelector("#ans").innerText=res;
+})
+
+document.querySelector("#sub").addEventListener("click",function(){
+    res= parseInt(document.querySelector("#num1").value) - parseInt(document.querySelector("#num2").value);
+    document.querySelector("#ans").innerText=res;
+})
+
+document.querySelector("#mul").addEventListener("click",function(){
+    res= parseInt(document.querySelector("#num1").value) * parseInt(document.querySelector("#num2").value);
+    document.querySelector("#ans").innerText=res;
+})
+
+document.querySelector("#dev").addEventListener("click",function(){
+    res= parseInt(document.querySelector("#num1").value) / parseInt(document.querySelector("#num2").value);
+    document.querySelector("#ans").innerText=res;
+})
+
+
+</script>
+</body>
+</html>
